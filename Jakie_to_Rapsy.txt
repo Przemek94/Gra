@@ -47,5 +47,4 @@ startActivity(intent);
 
 4.	Kilka błędów powstałych w wyniku złego nazewnictwa plików graficznych i dźwiękowych.
 
-abc
 
