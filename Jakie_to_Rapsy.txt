@@ -48,3 +48,19 @@ startActivity(intent);
 4.	Kilka błędów powstałych w wyniku złego nazewnictwa plików graficznych i dźwiękowych.
 
 
+
+Użyte tuoriale/poradniki
+
+
+Android Kurs części od 1 do 14.
+https://www.youtube.com/user/PjakProgramowanie/videos
+
+Zmiana koloru przycisku po ich kliknięciu:
+https://www.youtube.com/watch?v=IgbGeOIPu8w
+
+Sposób zapisu kolorów w plikach javy
+http://developer.android.com/reference/android/graphics/Color.html
+
+
+
+

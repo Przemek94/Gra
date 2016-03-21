@@ -31,10 +31,52 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Gra"
+            android:name=".Pytanie1"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Wynik" >
+        <activity
+            android:name=".Wynik"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Start"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie3"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie4"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie5"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie6"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie7"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie8"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie9"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Pytanie10"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
