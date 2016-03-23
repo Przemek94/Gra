@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Pytanie10 extends AppCompatActivity {
+public class Pytanie17 extends AppCompatActivity {
 
     MediaPlayer pytanie;
-    Button b1,b2, b3, b4, b5;
+    Button b1, b2, b3, b4, b5;
 
 
 
@@ -25,22 +25,20 @@ public class Pytanie10 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pytanie10);
+        setContentView(R.layout.activity_pytanie17);
         b1 = (Button) findViewById(R.id.bttn1);
         b2 = (Button) findViewById(R.id.bttn2);
         b3 = (Button) findViewById(R.id.bttn3);
         b4 = (Button) findViewById(R.id.bttn4);
         b5 = (Button) findViewById(R.id.bttn5);
-        pytanie = MediaPlayer.create(this, R.raw.pytanie10);
+
+        pytanie = MediaPlayer.create(this, R.raw.pytanie17);
         pytanie.start();
         b1.setBackgroundColor(0xff2BBCEC);
         b2.setBackgroundColor(0xff2BBCEC);
         b3.setBackgroundColor(0xff2BBCEC);
         b4.setBackgroundColor(0xff2BBCEC);
         b5.setBackgroundColor(0xff2BBCEC);
-
-
-
 
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
@@ -52,12 +50,11 @@ public class Pytanie10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 b5.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
+                b4.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
-
             }
 
         });
@@ -66,28 +63,26 @@ public class Pytanie10 extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b2.setBackgroundColor(0xFF00FF00);
+                b2.setBackgroundColor(0xffff0000);
+                b4.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b5.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
-
             }
 
         });
-
 
 
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 b3.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
+                b4.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
-                b2.setEnabled(false);
                 b5.setEnabled(false);
+                b2.setEnabled(false);
                 b4.setEnabled(false);
-
             }
 
         });
@@ -95,8 +90,7 @@ public class Pytanie10 extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b4.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
+                b4.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
                 b5.setEnabled(false);
@@ -105,14 +99,12 @@ public class Pytanie10 extends AppCompatActivity {
             }
 
         });
-
-
     }
-
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie11.class);
+        Intent intent = new Intent(this, Pytanie18.class);
         startActivity(intent);
     }
+
 
     @Override
     public void onPause() {

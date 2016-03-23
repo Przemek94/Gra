@@ -81,7 +81,7 @@ public class Pytanie5 extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b4.setBackgroundColor(0xffff0000);
+                b3.setBackgroundColor(0xffff0000);
                 b2.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);

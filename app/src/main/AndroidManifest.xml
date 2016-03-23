@@ -48,35 +48,55 @@
         </activity>
         <activity
             android:name=".Pytanie3"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie4"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie5"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie6"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie7"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie8"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie9"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Pytanie10"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".Pytanie11" >
+        </activity>
+        <activity android:name=".Pytanie12" >
+        </activity>
+        <activity android:name=".Pytanie13" >
+        </activity>
+        <activity android:name=".Pytanie14" >
+        </activity>
+        <activity android:name=".Pytanie15" >
+        </activity>
+        <activity android:name=".Pytanie16" >
+        </activity>
+        <activity android:name=".Pytanie17" >
+        </activity>
+        <activity android:name=".Pytanie18" >
+        </activity>
+        <activity android:name=".Pytanie19" >
+        </activity>
+        <activity android:name=".Pytanie20" >
         </activity>
     </application>
 
