@@ -138,6 +138,46 @@
         </activity>
         <activity android:name=".Pytanie40" >
         </activity>
+        <activity android:name=".Pytanie41" >
+        </activity>
+        <activity android:name=".Pytanie42" >
+        </activity>
+        <activity android:name=".Pytanie43" >
+        </activity>
+        <activity android:name=".Pytanie44" >
+        </activity>
+        <activity android:name=".Pytanie45" >
+        </activity>
+        <activity android:name=".Pytanie46" >
+        </activity>
+        <activity android:name=".Pytanie47" >
+        </activity>
+        <activity android:name=".Pytanie48" >
+        </activity>
+        <activity android:name=".Pytanie49" >
+        </activity>
+        <activity android:name=".Pytanie50" >
+        </activity>
+        <activity android:name=".Pytanie51" >
+        </activity>
+        <activity android:name=".Pytanie52" >
+        </activity>
+        <activity android:name=".Pytanie53" >
+        </activity>
+        <activity android:name=".Pytanie54" >
+        </activity>
+        <activity android:name=".Pytanie55" >
+        </activity>
+        <activity android:name=".Pytanie56" >
+        </activity>
+        <activity android:name=".Pytanie57" >
+        </activity>
+        <activity android:name=".Pytanie58" >
+        </activity>
+        <activity android:name=".Pytanie59" >
+        </activity>
+        <activity android:name=".Pytanie60" >
+        </activity>
     </application>
 
 </manifest>
