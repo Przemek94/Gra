@@ -110,7 +110,7 @@ public class Pytanie54 extends AppCompatActivity {
     }
 
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie54.class);
+        Intent intent = new Intent(this, Pytanie55.class);
         startActivity(intent);
     }
 

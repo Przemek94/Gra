@@ -101,7 +101,7 @@ public class Pytanie60 extends AppCompatActivity {
         });
     }
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie60.class);
+        Intent intent = new Intent(this, Pytanie61.class);
         startActivity(intent);
     }
 

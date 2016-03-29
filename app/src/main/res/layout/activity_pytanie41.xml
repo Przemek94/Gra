@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Jaki to kawałek???"
+        android:text="Kto to nawija???"
         android:id="@+id/textView2"
         android:gravity="center"
         android:textSize="30dp"
