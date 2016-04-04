@@ -5,10 +5,10 @@ Platforma: Android
 Język: Java, XML
 
 Plan projektu:
-1)	Ekran powitalny i szkic każdego z Activity(Menu Główne, Gra, Pomoc, Najlepszy Wynik) 
-2)	Stworzenie jednego pytania sprawdzającego poprawność odpowiedzi
-3)	Rozszerzenie bazy pytań
-4)	Zakodowanie losowości pytań bez możliwości powtarzania się ich w jednej grze
+1)	Ekran powitalny i szkic każdego z Activity(Menu Główne, Gra, Pomoc, Najlepszy Wynik)	11.03.16
+2)	Stworzenie jednego pytania sprawdzającego poprawność odpowiedzi	18.03.16
+3)	Rozszerzenie bazy pytań	01.04.16
+4)	Zakodowanie losowości pytań bez możliwości powtarzania się ich w jednej grze	08.03.16
 5)	Dodanie wskaźnika upływu czasu
 6)	Dodanie pauzy
 7)	Dodanie systemu punktacji
@@ -60,6 +60,9 @@ https://www.youtube.com/watch?v=IgbGeOIPu8w
 
 Sposób zapisu kolorów w plikach javy
 http://developer.android.com/reference/android/graphics/Color.html
+
+Losowe otwarcie się activity
+http://stackoverflow.com/questions/29579158/open-random-activities-when-button-is-clicked
 
 
 
