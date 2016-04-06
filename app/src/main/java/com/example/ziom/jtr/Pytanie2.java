@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class Pytanie2 extends AppCompatActivity {
 
     MediaPlayer pytanie;
@@ -101,7 +103,78 @@ public class Pytanie2 extends AppCompatActivity {
         });
     }
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie3.class);
+        Random generator = new Random();
+        int number = generator.nextInt(20) + 1;
+        //20- liczba losowanych activity
+
+        Class activity = null;
+
+
+        switch(number) {
+            case 1:
+
+                activity = Pytanie21.class;
+                break;
+            case 2:
+                activity = Pytanie22.class;
+                break;
+            case 3:
+                activity = Pytanie23.class;
+                break;
+            case 4:
+                activity = Pytanie24.class;
+                break;
+            case 5:
+                activity = Pytanie25.class;
+                break;
+            case 6:
+                activity = Pytanie26.class;
+                break;
+            case 7:
+                activity = Pytanie27.class;
+                break;
+            case 8:
+                activity = Pytanie28.class;
+                break;
+            case 9:
+                activity = Pytanie29.class;
+                break;
+            case 10:
+                activity = Pytanie30.class;
+                break;
+            case 11:
+                activity = Pytanie31.class;
+                break;
+            case 12:
+                activity = Pytanie32.class;
+                break;
+            case 13:
+                activity = Pytanie33.class;
+                break;
+            case 14:
+                activity = Pytanie34.class;
+                break;
+            case 15:
+                activity = Pytanie35.class;
+                break;
+            case 16:
+                activity = Pytanie36.class;
+                break;
+            case 17:
+                activity = Pytanie37.class;
+                break;
+            case 18:
+                activity = Pytanie38.class;
+                break;
+            case 19:
+                activity = Pytanie39.class;
+                break;
+            default:
+                activity = Pytanie40.class;
+                break;
+        }
+
+        Intent intent = new Intent(getBaseContext(), activity);
         startActivity(intent);
     }
 

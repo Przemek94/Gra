@@ -98,7 +98,7 @@ public class Start extends AppCompatActivity {
                 activity = Pytanie20.class;
                 break;
         }
-        // We use intents to start activities
+
         Intent intent = new Intent(getBaseContext(), activity);
         startActivity(intent);
     }
