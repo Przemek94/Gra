@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class Pytanie70 extends AppCompatActivity {
 
     MediaPlayer pytanie;
@@ -110,10 +112,80 @@ public class Pytanie70 extends AppCompatActivity {
     }
 
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie71.class);
+        Random generator = new Random();
+        int number = generator.nextInt(20) + 1;
+        //20- liczba losowanych activity
+
+        Class activity = null;
+
+
+        switch(number) {
+            case 1:
+
+                activity = Pytanie81.class;
+                break;
+            case 2:
+                activity = Pytanie82.class;
+                break;
+            case 3:
+                activity = Pytanie83.class;
+                break;
+            case 4:
+                activity = Pytanie84.class;
+                break;
+            case 5:
+                activity = Pytanie85.class;
+                break;
+            case 6:
+                activity = Pytanie86.class;
+                break;
+            case 7:
+                activity = Pytanie87.class;
+                break;
+            case 8:
+                activity = Pytanie88.class;
+                break;
+            case 9:
+                activity = Pytanie89.class;
+                break;
+            case 10:
+                activity = Pytanie90.class;
+                break;
+            case 11:
+                activity = Pytanie91.class;
+                break;
+            case 12:
+                activity = Pytanie92.class;
+                break;
+            case 13:
+                activity = Pytanie93.class;
+                break;
+            case 14:
+                activity = Pytanie94.class;
+                break;
+            case 15:
+                activity = Pytanie95.class;
+                break;
+            case 16:
+                activity = Pytanie96.class;
+                break;
+            case 17:
+                activity = Pytanie97.class;
+                break;
+            case 18:
+                activity = Pytanie98.class;
+                break;
+            case 19:
+                activity = Pytanie99.class;
+                break;
+            default:
+                activity = Pytanie100.class;
+                break;
+        }
+
+        Intent intent = new Intent(getBaseContext(), activity);
         startActivity(intent);
     }
-
     @Override
     public void onPause() {
         super.onPause();

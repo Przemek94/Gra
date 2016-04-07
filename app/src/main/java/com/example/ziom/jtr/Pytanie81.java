@@ -110,7 +110,7 @@ public class Pytanie81 extends AppCompatActivity {
     }
 
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Pytanie82.class);
+        Intent intent = new Intent(this, Koniec.class);
         startActivity(intent);
     }
 
