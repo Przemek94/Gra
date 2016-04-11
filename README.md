@@ -49,6 +49,10 @@ http://developer.android.com/reference/android/graphics/Color.html
 Losowe otwarcie się activity
 http://stackoverflow.com/questions/29579158/open-random-activities-when-button-is-clicked
 
+
+Dodanie upywu czasu
+https://www.youtube.com/watch?v=ZqqP69rJVmg
+
 ##Uwagi
 
 Po dodaniu czasu do gry stwierdziem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
