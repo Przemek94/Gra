@@ -23,13 +23,15 @@ Język: Java, XML
 
 5.Dodanie wskaźnika upływu czasu
 
-6.Dodanie pauzy
+6.Dodanie systemu punktacji
 
-7.Dodanie systemu punktacji
+7.Napisanie mechanizmu który będzie zapobiegal wyzerowaniu się najlepszego wyniku po zamkniciu gry.
 
 8.Stworzenie ostatecznego layoutu gry
 
 9.Testowanie poprawa błędów
+
+
 
 
 ##Użyte tuoriale/poradniki
@@ -46,3 +48,7 @@ http://developer.android.com/reference/android/graphics/Color.html
 
 Losowe otwarcie się activity
 http://stackoverflow.com/questions/29579158/open-random-activities-when-button-is-clicked
+
+##Uwagi
+
+Po dodaniu czasu do gry stwierdziem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
