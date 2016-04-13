@@ -46,7 +46,7 @@ public class Pytanie4 extends AppCompatActivity {
         b4 = (Button) findViewById(R.id.bttn4);
         b5 = (Button) findViewById(R.id.bttn5);
         textViewTime = (TextView) findViewById(R.id.textViewTime);
-        pytanie = MediaPlayer.create(this, R.raw.pytanie1);
+        pytanie = MediaPlayer.create(this, R.raw.pytanie4);
         pytanie.start();
         b1.setBackgroundColor(0xff2BBCEC);
         b2.setBackgroundColor(0xff2BBCEC);
@@ -166,6 +166,11 @@ public class Pytanie4 extends AppCompatActivity {
             pytanie.stop();
             b3.setBackgroundColor(0xFF00FF00);
             textViewTime.setText("Koniec Czasu");
+            b1.setEnabled(true);
+            b2.setEnabled(false);
+            b3.setEnabled(false);
+            b4.setEnabled(false);
+            b5.setEnabled(false);
         }
 
 

@@ -163,6 +163,11 @@ public class Pytanie18 extends AppCompatActivity {
             pytanie.stop();
             b4.setBackgroundColor(0xFF00FF00);
             textViewTime.setText("Koniec Czasu");
+            b1.setEnabled(true);
+            b2.setEnabled(false);
+            b3.setEnabled(false);
+            b4.setEnabled(false);
+            b5.setEnabled(false);
         }
 
 
