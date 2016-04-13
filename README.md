@@ -1,5 +1,5 @@
 # Gra
-Jakie to Rapsy?
+###Jakie to Rapsy?
 
 Specyfikacja
 
@@ -55,4 +55,4 @@ https://www.youtube.com/watch?v=ZqqP69rJVmg
 
 ##Uwagi
 
-Po dodaniu czasu do gry stwierdziem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
+Po dodaniu czasu do gry stwierdziłem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
