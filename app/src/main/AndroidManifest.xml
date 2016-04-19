@@ -438,7 +438,9 @@
             android:name=".Pytanie100"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Koniec" >
+        <activity
+            android:name=".Koniec"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

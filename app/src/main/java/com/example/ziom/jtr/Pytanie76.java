@@ -23,6 +23,7 @@ public class Pytanie76 extends AppCompatActivity {
     MediaPlayer pytanie;
     Button b1,b2, b3, b4, b5;
     TextView textViewTime;
+    long millis, punkty;
     final CounterClass timer = new CounterClass(15000, 1000);
 
 
@@ -80,6 +81,7 @@ public class Pytanie76 extends AppCompatActivity {
                 b4.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
+                punkty = punkty + millis;
 
             }
 
@@ -153,8 +155,8 @@ public class Pytanie76 extends AppCompatActivity {
         @Override
         public void onTick(long millisUntilFinished) {
             // TODO Auto-generated method stub
-
-            long millis = millisUntilFinished;
+            
+            millis = millisUntilFinished;
             String hms = String.format("%02d", TimeUnit.MILLISECONDS.toSeconds(millis));
             System.out.println(hms);
             textViewTime.setText(hms);
