@@ -53,6 +53,14 @@ http://stackoverflow.com/questions/29579158/open-random-activities-when-button-i
 Dodanie upywu czasu
 https://www.youtube.com/watch?v=ZqqP69rJVmg
 
+Dodanie systemu punktacji:
+
+http://stackoverflow.com/questions/7074097/how-to-pass-integer-from-one-activity-to-another
+
+https://www.youtube.com/watch?v=nRIup_VvFOQ&nohtml5=False
+
+https://www.youtube.com/watch?v=b885jtjA-YQ
+
 ##Uwagi
 
 Po dodaniu czasu do gry stwierdziłem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
