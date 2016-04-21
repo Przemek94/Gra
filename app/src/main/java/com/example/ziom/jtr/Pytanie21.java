@@ -58,6 +58,10 @@ public class Pytanie21 extends AppCompatActivity {
 
         textViewTime.setText("15");
 
+        Intent getpytanie;
+        getpytanie = getIntent();
+        punkty = getpytanie.getLongExtra("Punkty", 0);
+
 
 
         timer.start();
@@ -79,6 +83,7 @@ public class Pytanie21 extends AppCompatActivity {
                 b2.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
                 punkty = punkty + millis;
@@ -94,9 +99,10 @@ public class Pytanie21 extends AppCompatActivity {
                 b2.setBackgroundColor(0xffff0000);
                 b5.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
-                b5.setEnabled(false);
+                b2.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -113,8 +119,9 @@ public class Pytanie21 extends AppCompatActivity {
                 b5.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
-                b5.setEnabled(false);
+                b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -129,8 +136,9 @@ public class Pytanie21 extends AppCompatActivity {
                 b5.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
-                b5.setEnabled(false);
                 b3.setEnabled(false);
+                b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -252,6 +260,7 @@ public class Pytanie21 extends AppCompatActivity {
         }
 
         Intent intent = new Intent(getBaseContext(), activity);
+        intent.putExtra("Punkty", punkty);
         startActivity(intent);
     }
 

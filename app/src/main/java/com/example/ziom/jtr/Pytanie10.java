@@ -80,6 +80,7 @@ public class Pytanie10 extends AppCompatActivity {
                 b2.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -93,9 +94,10 @@ public class Pytanie10 extends AppCompatActivity {
             public void onClick(View v) {
                 b2.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
-                b5.setEnabled(false);
+                b2.setEnabled(false);
                 b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
                 punkty = punkty + millis;
@@ -113,8 +115,9 @@ public class Pytanie10 extends AppCompatActivity {
                 b2.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
-                b5.setEnabled(false);
+                b3.setEnabled(false);
                 b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -129,8 +132,9 @@ public class Pytanie10 extends AppCompatActivity {
                 b2.setBackgroundColor(0xFF00FF00);
                 pytanie.stop();
                 b2.setEnabled(false);
-                b5.setEnabled(false);
                 b3.setEnabled(false);
+                b4.setEnabled(false);
+                b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
 
@@ -253,6 +257,7 @@ public class Pytanie10 extends AppCompatActivity {
         }
 
         Intent intent = new Intent(getBaseContext(), activity);
+        intent.putExtra("Punkty", punkty);
         startActivity(intent);
     }
 

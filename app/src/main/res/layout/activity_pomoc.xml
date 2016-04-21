@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Jakie to rapsy??? Wersja 1.2"
+        android:text="Jakie to rapsy??? Wersja 1.6"
         android:id="@+id/textView"
         android:layout_marginTop="53dp"
         android:textSize="40dp"
@@ -23,13 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=" Rozszerzenie bazy pytań. Użytkownik po wciśnięciu przycisku „Nowa Gra” przechodzi do ekranu Rozpoczynającego grę gdzie po wciśnięciu przycisku „Start” uruchamia się pierwsze pytanie. Użytkownik po udzieleniu odpowiedzi sam przechodzi do kolejnego pytania za pośrednictwem przycisku „Dalej”. Może również nie udzielić żadnej odpowiedzi aby przejść do kolejnego pytania. Po udzieleniu jednej odpowiedzi nie ma możliwości wybrania innej. "
+        android:text="© Copyright Przemysław Wierzbicki Kontakt: xxl94@o2.pl"
         android:textSize="18dp"
         android:textColor="#000000"
         android:id="@+id/textView5"
         android:gravity="center"
         android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="29dp" />
 </RelativeLayout>
