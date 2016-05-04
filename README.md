@@ -61,6 +61,8 @@ https://www.youtube.com/watch?v=nRIup_VvFOQ&nohtml5=False
 
 https://www.youtube.com/watch?v=b885jtjA-YQ
 
+Zapamiętywanie najlepszego wyniku: https://www.youtube.com/watch?v=b4qmpxaNiUQ
+
 ##Uwagi
 
 Po dodaniu czasu do gry stwierdziłem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
