@@ -16,20 +16,18 @@
         android:textColor="#000000"
         android:textSize="40dp"
         android:id="@+id/textView3"
+        android:layout_marginTop="80dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0"
-        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="30dp"
         android:textColor="#000000"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:id="@+id/Wynik"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
