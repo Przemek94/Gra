@@ -19,12 +19,17 @@ public class Menu extends AppCompatActivity {
     }
 
     public void New_Game(View view) {
-        Intent intent = new Intent(this, Gra.class);
+        Intent intent = new Intent(this, Start.class);
         startActivity(intent);
     }
 
     public void Help(View view) {
         Intent intent = new Intent(this, Pomoc.class);
+        startActivity(intent);
+    }
+
+    public void Wynik(View view) {
+        Intent intent = new Intent(this, Wynik.class);
         startActivity(intent);
     }
 
