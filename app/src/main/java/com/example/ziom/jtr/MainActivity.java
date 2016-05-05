@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Thread watek = new Thread(){
             public void run(){
                 try {
-                    sleep(3000);
+                    sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
