@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu"
+        <activity
+            android:name=".Menu"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.example.ziom.jtr.MainActivity" />
@@ -24,17 +26,421 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pomoc"
+        <activity
+            android:name=".Pomoc"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Gra"
+        <activity
+            android:name=".Pytanie1"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".dobrze"
+        <activity
+            android:name=".Wynik"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".zle"
+        <activity
+            android:name=".Start"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie3"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie4"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie5"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie6"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie7"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie8"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie9"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie10"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie11"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie12"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie13"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie14"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie15"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie16"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie17"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie18"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie19"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie20"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie21"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie22"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie23"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie24"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie25"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie26"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie27"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie28"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie29"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie30"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie31"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie32"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie33"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie34"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie35"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie36"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie37"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie38"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie39"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie40"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie41"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie42"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie43"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie44"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie45"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie46"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie47"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie48"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie49"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie50"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie51"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie52"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie53"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie54"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie55"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie56"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie57"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie58"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie59"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie60"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie61"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie62"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie63"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie64"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie65"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie66"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie67"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie68"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie69"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie70"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie71"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie72"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie73"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie74"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie75"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie76"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie78"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie77"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie79"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie80"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie81"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie82"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie83"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie84"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie85"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie86"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie87"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie88"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie89"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie90"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie91"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie92"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie93"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie94"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie95"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie96"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie97"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie98"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie99"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Pytanie100"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Koniec"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
