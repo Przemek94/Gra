@@ -21,15 +21,23 @@ Język: Java, XML
 
 4.Zakodowanie losowości pytań bez możliwości powtarzania się ich w jednej grze	08.03.16
 
-5.Dodanie wskaźnika upływu czasu
+5.Dodanie wskaźnika upływu czasu 15.04.16
 
-6.Dodanie systemu punktacji
+6.Dodanie systemu punktacji 22.04.16
 
-7.Napisanie mechanizmu który będzie zapobiegal wyzerowaniu się najlepszego wyniku po zamkniciu gry.
+7.Napisanie mechanizmu który będzie zapobiegal wyzerowaniu się najlepszego wyniku po zamkniciu gry. 29.04.16
 
-8.Stworzenie ostatecznego layoutu gry
+8.Stworzenie bazy danych do której będzie możliwość zapisania swojego wyniku podając swój nick. 13.05.16
 
-9.Testowanie poprawa błędów
+9.Dopracowanie bazy danych pod względem sortowania danych, ich wyświetlania i sprawdzania wysyłanych do niej danych
+
+10.Zamiana dotychczasowego wskaźnika upływu czasu na bardziej rozbudowany.
+
+11.Stworzenie ostatecznego layoutu gry.
+
+12.Dodanie bonusowego poziomu który odblokuje się po zdobyciu określonej liczby punktów
+
+13.Testowanie poprawa błędów
 
 
 
@@ -62,6 +70,13 @@ https://www.youtube.com/watch?v=nRIup_VvFOQ&nohtml5=False
 https://www.youtube.com/watch?v=b885jtjA-YQ
 
 Zapamiętywanie najlepszego wyniku: https://www.youtube.com/watch?v=b4qmpxaNiUQ
+
+Tworzenie bazy danych: 
+
+https://www.youtube.com/watch?v=cp2rL3sAFmI Części od 1 do 5
+
+http://stackoverflow.com/questions/818677/android-order-by-in-query Sortowanie wyników od największych
+
 
 ##Uwagi
 
