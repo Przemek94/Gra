@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ziom.jtr" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+"
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,11 +22,6 @@
         <activity
             android:name=".Menu"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="com.example.ziom.jtr.MainActivity" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Pomoc"
@@ -440,7 +437,18 @@
         </activity>
         <activity
             android:name=".Koniec"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".Logowanie" >
+            <intent-filter>
+                <action android:name="com.example.ziom.jtr.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Rejestracja" >
+        </activity>
+        <activity android:name=".JSON" >
         </activity>
     </application>
 
