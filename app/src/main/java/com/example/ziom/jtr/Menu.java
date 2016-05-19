@@ -3,17 +3,16 @@ package com.example.ziom.jtr;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
     DatabaseHelper myDb;
     Button btnnaj;
     String username;
-    TextView nick;
+   // TextView nick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         myDb = new DatabaseHelper(this);
         btnnaj = (Button) findViewById(R.id.Najlepszy);
-        nick = (TextView) findViewById(R.id.nick);
+      //  nick = (TextView) findViewById(R.id.nick);
         viewAll();
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
@@ -29,11 +28,11 @@ public class Menu extends AppCompatActivity {
             bar.hide();
         }
 
-        Intent getusername;
-        getusername = getIntent();
-        username = getusername.getStringExtra("Username");
+     //   Intent getusername;
+       // getusername = getIntent();
+       // username = getusername.getStringExtra("Username");
 
-        nick.setText(username);
+       // nick.setText(username);
     }
 
     public  void viewAll() {
@@ -83,6 +82,7 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(this, JSON.class);
         startActivity(intent);
     }
+
 
     //public void off(View view) {
       //  Intent intent = new Intent(this, Menu.class);

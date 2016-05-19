@@ -1,14 +1,14 @@
 
 <?php
 require "conn.php";
-$sql = "SELECT * FROM `punktacja` ";
+$sql = "SELECT * FROM `players_data` ";
 
 $result = mysqli_query($conn ,$sql);
 
 $response = array();
 while($row = mysqli_fetch_array($result));
 {
-array_push($response,array("punkty"=>$row["punkty"],"username"=>$row["username"]));
+array_push($response,array("id"=>$row[0],"username"=>$row[1]));
 	
 }
 

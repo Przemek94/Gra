@@ -2,7 +2,6 @@ package com.example.ziom.jtr;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
@@ -23,7 +22,7 @@ import java.net.URLEncoder;
 public class BackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
-    String username;
+  //  String username;
 
 
     BackgroundWorker(Context ctx) {
@@ -35,8 +34,8 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-        String login_url = "http://192.168.1.11/login.php";
-        String register_url = "http://192.168.1.11/register.php";
+        String login_url = "http://jakietorapsy.cba.pl/login.php";
+        String register_url = "http://jakietorapsy.cba.pl/register.php";
         if (type.equals("login")) {
             try {
                 String user_name = params[1];
@@ -118,7 +117,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected void onPostExecute(String result) {
 
-        if (result.equals("Error")) {
+     /*   if (result.equals("Error")) {
             alertDialog.setMessage(result);
             alertDialog.show();
         } else if (result.equals("OK")) {
@@ -126,9 +125,9 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             intent = new Intent(context, Logowanie.class);
             context.startActivity(intent);
         } else if (result.equals("login not success")) {
-            alertDialog.setMessage(result);
+     */     alertDialog.setMessage(result);
             alertDialog.show();
-        } else {
+        /* } else {
             Intent intent;
             intent = new Intent(context, Menu.class);
             username = result;
@@ -136,7 +135,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             context.startActivity(intent);
 
         }
-    }
+    */}
 
 
 

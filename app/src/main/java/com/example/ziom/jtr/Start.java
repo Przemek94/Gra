@@ -1,8 +1,8 @@
 package com.example.ziom.jtr;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -99,7 +99,7 @@ public class Start extends AppCompatActivity {
                 break;
         }
 
-        Intent intent = new Intent(getBaseContext(), activity);
+        Intent intent = new Intent(getBaseContext(), Pytanie1.class);
         startActivity(intent);
     }
 
