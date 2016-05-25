@@ -2,17 +2,22 @@ package com.example.ziom.jtr;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
     DatabaseHelper myDb;
     Button btnnaj;
     String username;
-   // TextView nick;
+    TextView login;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +25,33 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         myDb = new DatabaseHelper(this);
         btnnaj = (Button) findViewById(R.id.Najlepszy);
-      //  nick = (TextView) findViewById(R.id.nick);
+        login = (TextView) findViewById(R.id.nick);
         viewAll();
+
+
+        //sharedPreferences = getSharedPreferences("com.example.ziom.jtr;", Context.MODE_APPEND);
+        //editor = sharedPreferences.edit();
+        //editor.putString("Username", username);
+
+        //SharedPreferences sharedPreferences = getSharedPreferences("MyData", MODE_PRIVATE);
+        //SharedPreferences.Editor editor = sharedPreferences.edit();
+        //editor.putString("Login", username);
+        //editor.commit();
+
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
         if (bar != null) {
             bar.hide();
         }
 
-     //   Intent getusername;
-       // getusername = getIntent();
-       // username = getusername.getStringExtra("Username");
+        Intent getusername;
+        getusername = getIntent();
+        username = getusername.getStringExtra("Login");
 
-       // nick.setText(username);
+        login.setText(username);
     }
+    
+
 
     public  void viewAll() {
         btnnaj.setOnClickListener(
@@ -71,6 +89,10 @@ public class Menu extends AppCompatActivity {
     public void New_Game(View view) {
         Intent intent = new Intent(this, Start.class);
         startActivity(intent);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Login", username);
+        editor.commit();
     }
 
     public void Help(View view) {
@@ -83,6 +105,12 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public  void logout(View view) {
+        Intent intent = new Intent(this, Logowanie.class);
+        startActivity(intent);
+        super.onPause();
+        finish();
+    }
 
     //public void off(View view) {
       //  Intent intent = new Intent(this, Menu.class);

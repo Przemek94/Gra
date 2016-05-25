@@ -1,25 +1,22 @@
 package com.example.ziom.jtr;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Koniec extends AppCompatActivity {
-    DatabaseHelper myDb;
-    EditText editNick;
-    Button btnSave, btnView, bttnUpdate;
+    //DatabaseHelper myDb;
+  //  EditText editNick;
+   // Button btnSave, btnView, bttnUpdate;
 
-    TextView Wynik, NajleszyWynik;
-    long punkty, punkty1, ppunkty;
+    TextView Wynik, NajleszyWynik,login, points;
+    long punkty;
+    long punkty1;
+    long ppunkty;
     public static final String SAVE = "Najlepszy Wynik";
+    public static final String DEFAULT = "Login";
     Intent intent;
 
 
@@ -27,24 +24,34 @@ public class Koniec extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koniec);
-        myDb = new DatabaseHelper(this);
+       /* myDb = new DatabaseHelper(this);
         editNick = (EditText) findViewById(R.id.Nick);
         btnSave = (Button) findViewById(R.id.Save);
         btnView = (Button) findViewById(R.id.View);
         bttnUpdate = (Button) findViewById(R.id.Update);
-        Wynik = (TextView) findViewById(R.id.Wynik);
-        NajleszyWynik = (TextView) findViewById(R.id.NajlepszyWynik);
+
+
         AddData();
         viewAll();
-        UpdateData();
+        UpdateData();*/
+        Wynik = (TextView) findViewById(R.id.Wynik);
+        NajleszyWynik = (TextView) findViewById(R.id.NajlepszyWynik);
+        login = (TextView)findViewById(R.id.login);
 
         Wynik.setText("punkty");
+
 
         Intent getpytanie;
         getpytanie = getIntent();
         punkty = getpytanie.getLongExtra("Punkty", 0);
 
         ppunkty = punkty;
+
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData" ,MODE_PRIVATE);
+        String username = sharedPreferences.getString("Login", DEFAULT);
+        login.setText(username);
 
 
 
@@ -70,6 +77,12 @@ public class Koniec extends AppCompatActivity {
         System.out.println(wynik);
         Wynik.setText(wynik);
 
+        String str_username = login.getText().toString();
+        String str_points = Wynik.getText().toString();
+        String type = "points";
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.execute(type, str_username, str_points);
+
 
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
@@ -78,7 +91,11 @@ public class Koniec extends AppCompatActivity {
         }
     }
 
-    public  void UpdateData() {
+
+
+
+
+   /* public  void UpdateData() {
         bttnUpdate.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -141,7 +158,7 @@ public class Koniec extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage((Message));
         builder.show();
-    }
+    }*/
 
     @Override
     public void onPause() {

@@ -2,53 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\Przemek\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\pre-dexed\debug\classes-1d3c7678c035f97a77d064be70893d6147e7a01f.jar" />
+        revision="22.0.1"
+        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
+        <dex dex="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.0-db48f9c75a1d7b35778e6647f8be08aa033286b5.jar" />
     </item>
     <item
-        jar="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\pre-dexed\debug\classes-23230cd8394959288c1be60595966dfaca4a5553.jar" />
+        revision="22.0.1"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\pre-dexed\debug\classes-90419dc91c1e52a3faa5508b20368f0a9c0babc1.jar" />
     </item>
     <item
-        jar="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\libs\internal_impl-22.1.0.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\pre-dexed\debug\classes-a02a485284f2fae25e849f59b1295c8f815b44d1.jar" />
+        revision="22.0.1"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.0-d1a57f47f985520f1f20b36f69b91d70671c15ae.jar" />
     </item>
     <item
-        jar="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.0\jars\classes.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\pre-dexed\debug\classes-46fad9fb47b8ff05e4918388360649602bf13495.jar" />
+        revision="22.0.1"
+        sha1="983e2f375504bc04def18e709c35192afe92e65f">
+        <dex dex="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\pre-dexed\debug\classes-67b3f4e4fa0dc5cbb3cc00c60ae45b5cba2a930f.jar" />
     </item>
     <item
-        jar="C:\Users\Przemek\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="C:\Users\Przemek\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
         jumboMode="false"
-        revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-dab307467ba7c961fb5160eb18068e085f8b93ba.jar" />
-    </item>
-    <item
-        jar="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Przemek\Desktop\Nowy folder\JTR\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-36cc77722aefbd70df9f7c0099e778b57e5e9276.jar" />
-    </item>
-    <item
-        jar="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Przemek\Desktop\gra\29.04\JTR\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-a294ab24020878977740c33834f077e4a178b54d.jar" />
+        revision="22.0.1"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="C:\Users\Przemek\Desktop\JTR\app\build\intermediates\pre-dexed\debug\library-1.0.19-ac6b9bab6ffe97ceb6ff49fc3c7285970d4faac0.jar" />
     </item>
 
 </items>

@@ -1,9 +1,8 @@
 <?php 
 require "conn.php";
 $username = $_POST["username"];
-$email = $_POST["email"];
 $password = $_POST["password"];
-$mysql_qry = "insert into players_data (username, email, password) values ('$username', '$email', '$password')";
+$mysql_qry = "insert into users (username, password) values ('$username', '$password')";
 
 if($conn->query($mysql_qry) === TRUE) {
 echo "OK";

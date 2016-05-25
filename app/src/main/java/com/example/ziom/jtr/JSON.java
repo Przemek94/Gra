@@ -33,7 +33,7 @@ public class JSON extends AppCompatActivity {
         String  json_url;
         @Override
         protected void onPreExecute() {
-            json_url = "http://jakietorapsy.cba.pl/json_get_data.php";
+            json_url = "http://serwer1643032.home.pl/json_get_data.php";
         }
 
         @Override

@@ -5,9 +5,9 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,12 +23,10 @@ public class Pytanie1 extends AppCompatActivity {
     MediaPlayer pytanie;
     Button b1,b2, b3, b4, b5;
     TextView textViewTime;
-
     long millis, punkty;
 
 
     final CounterClass timer = new CounterClass(15000, 1000);
-
 
 
 
@@ -45,7 +43,6 @@ public class Pytanie1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pytanie1);
-
         b1 = (Button) findViewById(R.id.bttn1);
         b2 = (Button) findViewById(R.id.bttn2);
         b3 = (Button) findViewById(R.id.bttn3);

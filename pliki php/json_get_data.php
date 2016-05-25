@@ -1,18 +1,29 @@
 
-<?php
-require "conn.php";
-$sql = "SELECT * FROM `players_data` ";
 
-$result = mysqli_query($conn ,$sql);
+<?php
+
+$host = "serwer1643032.home.pl";
+$user = "20332353_rapsy";
+$password = "Przemek01$";
+$db = "20332353_rapsy";
+
+$sql = "select * from punkty;";
+
+$con = mysqli_connect($host, $user, $password, $db);
+
+$result = mysqli_query($con,$sql);
 
 $response = array();
-while($row = mysqli_fetch_array($result));
+
+while($row = mysqli_fetch_array($result))
 {
-array_push($response,array("id"=>$row[0],"username"=>$row[1]));
+	
+	array_push($response, array("username"=>$row[1], "points"=>$row[2]));
 	
 }
 
-echo json_encode(array("server_response"=>$response));
+echo json_encode(array("serwer_response"=>$response));
 
-mysqli_close($conn);
+mysqli_close($con);
+
 ?>

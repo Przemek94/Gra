@@ -2,6 +2,7 @@ package com.example.ziom.jtr;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
@@ -22,7 +23,7 @@ import java.net.URLEncoder;
 public class BackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
-  //  String username;
+
 
 
     BackgroundWorker(Context ctx) {
@@ -34,21 +35,21 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-        String login_url = "http://jakietorapsy.cba.pl/login.php";
-        String register_url = "http://jakietorapsy.cba.pl/register.php";
-        if (type.equals("login")) {
+        String points_url = "http://serwer1643032.home.pl/points.php";
+        String register_url = "http://serwer1643032.home.pl/register.php";
+        if (type.equals("points")) {
             try {
-                String user_name = params[1];
-                String password = params[2];
-                URL url = new URL(login_url);
+                String username = params[1];
+                String points = params[2];
+                URL url = new URL(points_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("user_name", "UTF-8") + "=" + URLEncoder.encode(user_name, "UTF-8") + "&"
-                        + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
+                String post_data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&"
+                        + URLEncoder.encode("points", "UTF-8") + "=" + URLEncoder.encode(points, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -72,8 +73,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         } else if(type.equals("register")) {
             try {
                 String username = params[1];
-                String email = params[2];
-                String password = params[3];
+                String password = params[2];
                 URL url = new URL(register_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -82,7 +82,6 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String post_data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&"
-                        +URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8") + "&"
                         + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
@@ -117,25 +116,18 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected void onPostExecute(String result) {
 
-     /*   if (result.equals("Error")) {
+        if (result.equals("Error")) {
             alertDialog.setMessage(result);
             alertDialog.show();
         } else if (result.equals("OK")) {
             Intent intent;
             intent = new Intent(context, Logowanie.class);
             context.startActivity(intent);
-        } else if (result.equals("login not success")) {
-     */     alertDialog.setMessage(result);
+        } else {
+            alertDialog.setMessage(result);
             alertDialog.show();
-        /* } else {
-            Intent intent;
-            intent = new Intent(context, Menu.class);
-            username = result;
-            intent.putExtra("Username", username);
-            context.startActivity(intent);
-
         }
-    */}
+    }
 
 
 
