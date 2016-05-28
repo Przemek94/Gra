@@ -452,6 +452,8 @@
         </activity>
         <activity android:name=".Menu_offline" >
         </activity>
+        <activity android:name=".DisplayListView" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,14 +1,24 @@
 package com.example.ziom.jtr;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Menu extends AppCompatActivity {
     DatabaseHelper myDb;
@@ -17,6 +27,8 @@ public class Menu extends AppCompatActivity {
     TextView login;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    String JSON_String;
+    final String TAG = this.getClass().getName();
 
 
     @Override
@@ -24,9 +36,10 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         myDb = new DatabaseHelper(this);
-        btnnaj = (Button) findViewById(R.id.Najlepszy);
+        //btnnaj = (Button) findViewById(R.id.Najlepszy);
         login = (TextView) findViewById(R.id.nick);
-        viewAll();
+        //viewAll();
+        new BacgroundTask().execute();
 
 
         //sharedPreferences = getSharedPreferences("com.example.ziom.jtr;", Context.MODE_APPEND);
@@ -50,10 +63,62 @@ public class Menu extends AppCompatActivity {
 
         login.setText(username);
     }
-    
 
 
-    public  void viewAll() {
+
+    class BacgroundTask extends AsyncTask<Void,Void,String>
+    {
+        String  json_url;
+        @Override
+        protected void onPreExecute() {
+            json_url = "http://serwer1643032.home.pl/json_get_data.php";
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                URL url = new URL(json_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder stringBuilder = new StringBuilder();
+                while ((JSON_String = bufferedReader.readLine())!=null)
+                {
+                    stringBuilder.append(JSON_String+"\n");
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            JSON_String = result;
+        }
+
+
+    }
+
+
+
+    /*public  void viewAll() {
         btnnaj.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -78,13 +143,15 @@ public class Menu extends AppCompatActivity {
         );
     }
 
+
+
     public void showMessage(String title, String Message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage((Message));
         builder.show();
-    }
+    }*/
 
     public void New_Game(View view) {
         Intent intent = new Intent(this, Start.class);
@@ -101,7 +168,8 @@ public class Menu extends AppCompatActivity {
     }
 
     public void JSON(View view) {
-        Intent intent = new Intent(this, JSON.class);
+        Intent intent = new Intent(this,DisplayListView.class);
+        intent.putExtra("json_data",JSON_String);
         startActivity(intent);
     }
 
@@ -113,14 +181,41 @@ public class Menu extends AppCompatActivity {
     }
 
     //public void off(View view) {
-      //  Intent intent = new Intent(this, Menu.class);
-        //startActivity(intent);
+    //  Intent intent = new Intent(this, Menu.class);
+    //startActivity(intent);
     //}
 
-    //public void Wynik(View view) {
-      //  Intent intent = new Intent(this, Wynik.class);
-        //startActivity(intent);
-    //}
+    public void Wynik(View view) {
+    Intent intent = new Intent(this,DisplayListView.class);
+    intent.putExtra("json_data",JSON_String);
+    startActivity(intent);
+    }
+    boolean twice =false;
+    @Override
+    public void onBackPressed() {
 
+        Log.d(TAG, "click");
 
+        if(twice == true){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            System.exit(0);
+        }
+        twice = true;
+        Log.d(TAG, "twice: "+twice);
+       // super.onBackPressed();
+        Toast.makeText(Menu.this, "Kliknij dwa razy aby wyjść", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                twice = false;
+                Log.d(TAG, "twice: "+twice);
+
+            }
+        }, 3000);
+
+    }
 }

@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 public class Koniec extends AppCompatActivity {
     //DatabaseHelper myDb;
-  //  EditText editNick;
-   // Button btnSave, btnView, bttnUpdate;
+    //  EditText editNick;
+    // Button btnSave, btnView, bttnUpdate;
 
     TextView Wynik, NajleszyWynik,login, points;
     long punkty;

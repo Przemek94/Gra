@@ -2,7 +2,9 @@ package com.example.ziom.jtr;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +33,8 @@ public class Logowanie extends AppCompatActivity {
     private static final String URL = "http://serwer1643032.home.pl/user_control.php";
     private StringRequest request;
     String login;
+    final String TAG = this.getClass().getName();
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -121,6 +125,36 @@ public class Logowanie extends AppCompatActivity {
         super.onPause();
         finish();
     }
+
+    boolean twice=false;
+    @Override
+    public void onBackPressed() {
+
+        Log.d(TAG, "click");
+
+        if(twice == true){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            System.exit(0);
+        }
+        twice = true;
+        Log.d(TAG, "twice: "+twice);
+        // super.onBackPressed();
+        Toast.makeText(Logowanie.this, "Kliknij dwa razy aby wyjść", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                twice = false;
+                Log.d(TAG, "twice: " + twice);
+
+            }
+        }, 3000);
+
+    }
+
 }
 
 

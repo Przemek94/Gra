@@ -2,13 +2,17 @@ package com.example.ziom.jtr;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Rejestracja extends AppCompatActivity {
     EditText username, password;
-   // String str_username, str_email, str_password;
+    final String TAG = this.getClass().getName();
+    // String str_username, str_email, str_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,4 +47,34 @@ public class Rejestracja extends AppCompatActivity {
         Intent intent = new Intent(this, Logowanie.class);
         startActivity(intent);
     }
+
+    boolean twice =false;
+    @Override
+    public void onBackPressed() {
+
+        Log.d(TAG, "click");
+
+        if(twice == true){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            System.exit(0);
+        }
+        twice = true;
+        Log.d(TAG, "twice: "+twice);
+        // super.onBackPressed();
+        Toast.makeText(Rejestracja.this, "Kliknij dwa razy aby wyjść", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                twice = false;
+                Log.d(TAG, "twice: " + twice);
+
+            }
+        }, 3000);
+
+    }
+
 }

@@ -1,10 +1,12 @@
 package com.example.ziom.jtr;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -74,6 +76,21 @@ public class JSON extends AppCompatActivity {
         protected void onPostExecute(String result) {
             TextView textView = (TextView)findViewById(R.id.text);
             textView.setText(result);
+            JSON_String = result;
+        }
+    }
+
+    public void paraseJSON(View view)
+    {
+        if(JSON_String==null)
+        {
+            Toast.makeText(getApplicationContext(), "First Get JSON", Toast.LENGTH_LONG).show();
+
+        }
+        else {
+            Intent intent = new Intent(this,DisplayListView.class);
+            intent.putExtra("json_data",JSON_String);
+            startActivity(intent);
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php 
 require "conn.php";
-$username = "Przemek";
-$points = 1000;
+$username = $_POST["username"];
+$points = $_POST["points"];
 $mysql_qry = "UPDATE punkty SET points = GREATEST(points, '$points') WHERE username = '$username'";
 
 
