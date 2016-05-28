@@ -87,9 +87,17 @@ Pobieranie danych z bazy:
 
 https://www.youtube.com/watch?v=uFbwW4ERUN0
 
+Wyświetlanie uporządkowanych danych pobranych z bazy:
+
+https://www.youtube.com/watch?v=KSX4zIhiZlM
+
+Wychodzenie z aplikacji podwójnym kliknięciem cofania:
+
+https://www.youtube.com/watch?v=6X_1WhPcmYU
+
 
 ##Uwagi
 
 Po dodaniu czasu do gry stwierdziłem, że pauza w grze będzie nie potrzebna, za to pojawila się potrzeba napisania mechanizmu który po zamnięciu gry nie będzie usuwal zmiennej która przechowuje najlepszy wynik.
 
-Okazało się że baza danych którą stworzyłem może być dostępna tylko na urządzeniu. Dlatego stworzyłem nową bazę danych w mySQL narazie na localhost którą będę dopracowywać oraz przeniosą ją na ogólnodostępny serwer. Być może stara baza danych zostanie dlagrachy offline. 
+Okazało się że baza danych którą stworzyłem może być dostępna tylko na urządzeniu. Dlatego stworzyłem nową bazę danych w mySQL narazie na localhost którą będę dopracowywać oraz przeniosą ją na ogólnodostępny serwer. Być może stara baza danych zostanie dla graczy offline. 
