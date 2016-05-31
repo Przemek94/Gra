@@ -50,6 +50,7 @@ public class PunktyAdepter extends ArrayAdapter {
             punktyHolder = new PunktyHolder();
             punktyHolder.tx_username = (TextView) row.findViewById(R.id.tx_username);
             punktyHolder.tx_points = (TextView) row.findViewById(R.id.tx_points);
+            punktyHolder.tx_id = (TextView) row.findViewById(R.id.tx_id);
             row.setTag(punktyHolder);
 
         }
@@ -60,11 +61,12 @@ public class PunktyAdepter extends ArrayAdapter {
         Punkty punkty = (Punkty) this.getItem(position);
         punktyHolder.tx_username.setText(punkty.getUsername());
         punktyHolder.tx_points.setText(punkty.getPoints());
+        punktyHolder.tx_id.setText(punkty.getId());
         return row;
     }
 
     static class PunktyHolder
     {
-        TextView tx_username, tx_points;
+        TextView tx_username, tx_points, tx_id;
     }
 }

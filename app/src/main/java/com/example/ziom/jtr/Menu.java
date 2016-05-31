@@ -186,9 +186,12 @@ public class Menu extends AppCompatActivity {
     //}
 
     public void Wynik(View view) {
+        new BacgroundTask().execute();
     Intent intent = new Intent(this,DisplayListView.class);
-    intent.putExtra("json_data",JSON_String);
+        intent.putExtra("json_data", JSON_String);
     startActivity(intent);
+
+
     }
     boolean twice =false;
     @Override

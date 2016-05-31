@@ -93,4 +93,10 @@ public class JSON extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        finish();
+    }
 }

@@ -123,9 +123,6 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             Intent intent;
             intent = new Intent(context, Logowanie.class);
             context.startActivity(intent);
-        } else {
-            alertDialog.setMessage(result);
-            alertDialog.show();
         }
     }
 

@@ -24,7 +24,7 @@ public class Menu_offline extends AppCompatActivity {
     DatabaseHelper myDb;
     Button btnnaj;
     String username;
-    TextView nick;
+    TextView login;
     String JSON_String;
     final String TAG = this.getClass().getName();
 
@@ -34,7 +34,7 @@ public class Menu_offline extends AppCompatActivity {
         setContentView(R.layout.activity_menu_offline);
         myDb = new DatabaseHelper(this);
         //btnnaj = (Button) findViewById(R.id.Najlepszy);
-        nick = (TextView) findViewById(R.id.nick);
+        login = (TextView) findViewById(R.id.nick);
         new BacgroundTask().execute();
         //viewAll();
 
@@ -43,10 +43,11 @@ public class Menu_offline extends AppCompatActivity {
             bar.hide();
         }
 
+        Intent getusername;
+        getusername = getIntent();
+        username = getusername.getStringExtra("Login");
 
-        username = "noname";
-
-        nick.setText(username);
+        login.setText(username);
     }
 
     class BacgroundTask extends AsyncTask<Void,Void,String>

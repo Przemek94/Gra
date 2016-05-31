@@ -439,20 +439,29 @@
             android:name=".Koniec"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Logowanie" >
+        <activity android:name=".Logowanie"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.example.ziom.jtr.MainActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Rejestracja" >
+        <activity
+            android:name=".Rejestracja"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".JSON" >
+        <activity
+            android:name=".JSON"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Menu_offline" >
+        <activity
+            android:name=".Menu_offline"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DisplayListView" >
+        <activity
+            android:name=".DisplayListView"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

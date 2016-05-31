@@ -5,11 +5,14 @@ package com.example.ziom.jtr;
  */
 public class Punkty {
 
-    private String username, points;
+    private String username, points, id;
 
-    public Punkty(String username, String points){
+
+    public Punkty(String id, String username, String points){
         this.setUsername(username);
         this.setPoints(points);
+        this.setId(id);
+
     }
 
     public String getPoints() {
@@ -25,6 +28,17 @@ public class Punkty {
     }
 
     public void setUsername(String username) {
+
         this.username = username;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+
 }

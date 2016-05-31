@@ -29,17 +29,22 @@ public class DisplayListView extends AppCompatActivity {
             jsonObject = new JSONObject(JSON_String);
             jsonArray = jsonObject.getJSONArray("serwer_response");
             int count=0;
-            String username, points;
+            int nr = 1;
+            String username, points, id;
+
 
             while (count<jsonArray.length())
             {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 username = JO.getString("username");
                 points = JO.getString("points");
-                Punkty punkty = new Punkty(username, points);
+                id = String.valueOf(nr);
+                Punkty punkty = new Punkty(id, username, points);
                 punktyAdepter.add(punkty);
 
                 count++;
+                nr++;
+
             }
 
         } catch (JSONException e) {

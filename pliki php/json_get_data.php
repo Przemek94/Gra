@@ -7,7 +7,7 @@ $user = "20332353_rapsy";
 $password = "Przemek01$";
 $db = "20332353_rapsy";
 
-$sql = "select * from punkty;";
+$sql = "select * from punkty order by points desc";
 
 $con = mysqli_connect($host, $user, $password, $db);
 
