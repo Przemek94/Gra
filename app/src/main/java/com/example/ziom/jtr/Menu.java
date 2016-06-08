@@ -61,7 +61,7 @@ public class Menu extends AppCompatActivity {
         getusername = getIntent();
         username = getusername.getStringExtra("Login");
 
-        login.setText(username);
+
     }
 
 
@@ -167,11 +167,6 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void JSON(View view) {
-        Intent intent = new Intent(this,DisplayListView.class);
-        intent.putExtra("json_data",JSON_String);
-        startActivity(intent);
-    }
 
     public  void logout(View view) {
         Intent intent = new Intent(this, Logowanie.class);

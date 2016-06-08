@@ -18,6 +18,7 @@ public class Koniec extends AppCompatActivity {
     public static final String SAVE = "Najlepszy Wynik";
     public static final String DEFAULT = "Login";
     Intent intent;
+    String username;
 
 
     @Override
@@ -50,8 +51,8 @@ public class Koniec extends AppCompatActivity {
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyData" ,MODE_PRIVATE);
-        String username = sharedPreferences.getString("Login", DEFAULT);
-        login.setText(username);
+        username = sharedPreferences.getString("Login", DEFAULT);
+
 
 
 
@@ -77,7 +78,7 @@ public class Koniec extends AppCompatActivity {
         System.out.println(wynik);
         Wynik.setText(wynik);
 
-        String str_username = login.getText().toString();
+        String str_username = username;
         String str_points = Wynik.getText().toString();
         String type = "points";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);

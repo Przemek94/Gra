@@ -147,10 +147,7 @@ public class Menu_offline extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void JSON(View view) {
-        Intent intent = new Intent(this, JSON.class);
-        startActivity(intent);
-    }
+
 
     public  void login(View view) {
         Intent intent = new Intent(this, Logowanie.class);
