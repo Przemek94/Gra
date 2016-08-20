@@ -5,14 +5,17 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
@@ -24,6 +27,9 @@ public class Pytanie93 extends AppCompatActivity {
     Button b1,b2, b3, b4, b5;
     TextView textViewTime;
     long millis, punkty;
+    public static final int TIMER_RUNTIMER = 15000;
+    public boolean mbActivie;
+    public ProgressBar mProgressBar;
     final CounterClass timer = new CounterClass(15000, 1000);
 
 
@@ -46,14 +52,15 @@ public class Pytanie93 extends AppCompatActivity {
         b3 = (Button) findViewById(R.id.bttn3);
         b4 = (Button) findViewById(R.id.bttn4);
         b5 = (Button) findViewById(R.id.bttn5);
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         textViewTime = (TextView) findViewById(R.id.textViewTime);
         pytanie = MediaPlayer.create(this, R.raw.pytanie93);
         pytanie.start();
-        b1.setBackgroundColor(0xff2BBCEC);
-        b2.setBackgroundColor(0xff2BBCEC);
-        b3.setBackgroundColor(0xff2BBCEC);
-        b4.setBackgroundColor(0xff2BBCEC);
-        b5.setBackgroundColor(0xff2BBCEC);
+        b1.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b4.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b5.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
         b1.setEnabled(false);
 
         textViewTime.setText("15");
@@ -65,6 +72,27 @@ public class Pytanie93 extends AppCompatActivity {
 
 
         timer.start();
+        final Thread timerThread = new Thread() {
+            @Override
+            public void run() {
+                mbActivie = true;
+                try {
+                    int waited = 0;
+                    while (mbActivie && (waited < TIMER_RUNTIMER)) {
+                        sleep(200);
+                        if (mbActivie) {
+                            waited += 200;
+                            updateProgress(waited);
+                        }
+                    }
+                } catch (InterruptedException e) {
+
+                } finally {
+                    onContinue();
+                }
+            }
+        };
+        timerThread.start();
 
 
 
@@ -78,8 +106,8 @@ public class Pytanie93 extends AppCompatActivity {
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b5.setBackgroundColor(0xffff0000);
-                b3.setBackgroundColor(0xFF00FF00);
+                b5.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -87,6 +115,7 @@ public class Pytanie93 extends AppCompatActivity {
                 b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
+                mbActivie = false;
 
             }
 
@@ -96,8 +125,8 @@ public class Pytanie93 extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b2.setBackgroundColor(0xffff0000);
-                b3.setBackgroundColor(0xFF00FF00);
+                b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -105,6 +134,7 @@ public class Pytanie93 extends AppCompatActivity {
                 b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
+                mbActivie = false;
 
             }
 
@@ -115,7 +145,7 @@ public class Pytanie93 extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b3.setBackgroundColor(0xFF00FF00);
+                b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -124,6 +154,7 @@ public class Pytanie93 extends AppCompatActivity {
                 timer.cancel();
                 b1.setEnabled(true);
                 punkty = punkty + millis;
+                mbActivie = false;
 
             }
 
@@ -132,8 +163,8 @@ public class Pytanie93 extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b4.setBackgroundColor(0xffff0000);
-                b3.setBackgroundColor(0xFF00FF00);
+                b4.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -141,6 +172,7 @@ public class Pytanie93 extends AppCompatActivity {
                 b5.setEnabled(false);
                 timer.cancel();
                 b1.setEnabled(true);
+                mbActivie = false;
 
             }
 
@@ -174,7 +206,7 @@ public class Pytanie93 extends AppCompatActivity {
         public void onFinish() {
             // TODO Auto-generated method stub
             pytanie.stop();
-            b3.setBackgroundColor(0xFF00FF00);
+            b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
             textViewTime.setText("Koniec Czasu");
             b1.setEnabled(true);
             b2.setEnabled(false);
@@ -187,12 +219,31 @@ public class Pytanie93 extends AppCompatActivity {
 
     }
     public void Dalej(View view) {
-        Intent intent = new Intent(this, Koniec.class);
-        intent.putExtra("Punkty", punkty);
-        startActivity(intent);
+        Thread watek = new Thread(){
+            public void run(){
+                try {
+                    sleep(700);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    Intent intent = new Intent(getBaseContext(), Koniec.class);
+                    intent.putExtra("Punkty", punkty);
+                    startActivity(intent);
+                }
+            }
+        };
+
+        final Animation animTranslater = AnimationUtils.loadAnimation(this, R.anim.anim_translater);
+        final Animation animTranslatel = AnimationUtils.loadAnimation(this, R.anim.anim_translatel);
+        b5.startAnimation(animTranslater);
+        b3.startAnimation(animTranslatel);
+        b2.startAnimation(animTranslater);
+        b4.startAnimation(animTranslatel);
+        watek.start();
+
+
     }
-
-
     @Override
     public void onPause() {
         super.onPause();
@@ -203,6 +254,17 @@ public class Pytanie93 extends AppCompatActivity {
     }
 
 
+    public void updateProgress(final int timePassed) {
+        if(null != mProgressBar) {
+
+            final int progress = mProgressBar.getMax() * timePassed / TIMER_RUNTIMER;
+            mProgressBar.setProgress(progress);
+        }
+    }
+
+    public void onContinue() {
+        Log.d("messagmentFinal", "Cos tam po francusku");
+    }
 
 
 

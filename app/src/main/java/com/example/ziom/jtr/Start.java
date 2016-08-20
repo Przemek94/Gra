@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class Start extends AppCompatActivity {
 
     Button b1;
@@ -26,11 +28,11 @@ public class Start extends AppCompatActivity {
     public void Start(View view) {
 
 
-       // Random generator = new Random();
-       // int number = generator.nextInt(20) + 1;
+        Random generator = new Random();
+        int number = generator.nextInt(20) + 1;
         //20- liczba losowanych activity
 
-        /*Class activity = null;
+        Class activity = null;
 
 
         switch(number) {
@@ -95,10 +97,10 @@ public class Start extends AppCompatActivity {
             default:
                 activity = Pytanie20.class;
                 break;
-        }*/
+        }
 
-        //Intent intent = new Intent(getBaseContext(), activity);
-        Intent intent = new Intent(this, Pytanie1.class);
+        Intent intent = new Intent(getBaseContext(), activity);
+        //Intent intent = new Intent(this, Pytanie1.class);
         startActivity(intent);
     }
 

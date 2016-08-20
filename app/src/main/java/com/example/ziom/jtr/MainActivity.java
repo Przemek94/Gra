@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         android.support.v7.app.ActionBar bar = getSupportActionBar();
         if (bar != null) {
             bar.hide();

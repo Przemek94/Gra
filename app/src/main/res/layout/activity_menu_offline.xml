@@ -5,7 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#1973DB">
+    android:background="@color/blue">
     tools:context="com.example.ziom.jtr.Menu">
 
     <Button
@@ -16,7 +16,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:onClick="New_Game"/>
+        android:onClick="New_Game"
+        android:background="@drawable/shape"/>
 
 
     <Button
@@ -27,7 +28,8 @@
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:onClick="Wynik"/>
+        android:onClick="Wynik"
+        android:background="@drawable/shape"/>
 
     <Button
         android:layout_width="200dp"
@@ -38,7 +40,8 @@
         android:layout_marginTop="30dp"
         android:layout_below="@+id/Najlepszy"
         android:layout_alignLeft="@+id/Najlepszy"
-        android:layout_alignStart="@+id/Najlepszy" />
+        android:layout_alignStart="@+id/Najlepszy"
+        android:background="@drawable/shape"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
         android:onClick="login"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shape"/>
 
 
 </RelativeLayout>

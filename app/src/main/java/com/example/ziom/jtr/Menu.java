@@ -19,6 +19,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Menu extends AppCompatActivity {
     DatabaseHelper myDb;
@@ -39,7 +41,16 @@ public class Menu extends AppCompatActivity {
         //btnnaj = (Button) findViewById(R.id.Najlepszy);
         login = (TextView) findViewById(R.id.nick);
         //viewAll();
+
         new BacgroundTask().execute();
+
+        Timer myTimer2 = new Timer();
+        myTimer2.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                new BacgroundTask().execute();
+            }
+        }, 0, 1000);
 
 
         //sharedPreferences = getSharedPreferences("com.example.ziom.jtr;", Context.MODE_APPEND);

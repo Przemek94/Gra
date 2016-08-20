@@ -2,9 +2,12 @@ package com.example.ziom.jtr;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Koniec extends AppCompatActivity {
     //DatabaseHelper myDb;
@@ -78,11 +81,21 @@ public class Koniec extends AppCompatActivity {
         System.out.println(wynik);
         Wynik.setText(wynik);
 
-        String str_username = username;
-        String str_points = Wynik.getText().toString();
-        String type = "points";
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type, str_username, str_points);
+        ConnectivityManager cMenager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo nInfo = cMenager.getActiveNetworkInfo();
+        if (nInfo != null && nInfo.isConnected()) {
+            String str_username = username;
+            String str_points = Wynik.getText().toString();
+            String type = "points";
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.execute(type, str_username, str_points);
+
+
+        } else {
+            Toast.makeText(this, "Brak połączenia z internetem", Toast.LENGTH_LONG).show();
+
+        }
+
 
 
 

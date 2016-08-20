@@ -26,7 +26,8 @@
         android:layout_below="@+id/password"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:onClick="Zaloguj"/>
 
 
     <Button

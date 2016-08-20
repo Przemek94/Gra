@@ -1,6 +1,8 @@
 package com.example.ziom.jtr;
 
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -35,11 +37,19 @@ public class Rejestracja extends AppCompatActivity {
     }
 
     public void OnReg(View view) {
-        String str_username = username.getText().toString();
-        String str_password = password.getText().toString();
-        String type = "register";
-        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type, str_username, str_password);
+        ConnectivityManager cMenager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo nInfo = cMenager.getActiveNetworkInfo();
+        if (nInfo != null && nInfo.isConnected()) {
+            String str_username = username.getText().toString();
+            String str_password = password.getText().toString();
+            String type = "register";
+            BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+            backgroundWorker.execute(type, str_username, str_password);
+        } else {
+            Toast.makeText(this, "Brak połączenia z internetem", Toast.LENGTH_LONG).show();
+
+        }
+
 
     }
 

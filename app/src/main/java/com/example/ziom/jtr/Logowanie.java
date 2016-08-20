@@ -1,6 +1,8 @@
 package com.example.ziom.jtr;
 
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +43,15 @@ public class Logowanie extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logowanie);
 
+        ConnectivityManager cMenager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo nInfo = cMenager.getActiveNetworkInfo();
+        if (nInfo != null && nInfo.isConnected()) {
+            Toast.makeText(this, "Połączono", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Brak połączenia z internetem", Toast.LENGTH_LONG).show();
+
+        }
+
         android.support.v7.app.ActionBar bar = getSupportActionBar();
         if (bar != null) {
             bar.hide();
@@ -52,11 +63,16 @@ public class Logowanie extends AppCompatActivity {
 
 
         requestQueue = Volley.newRequestQueue(this);
+    }
 
-        logowanie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
+
+        //logowanie.setOnClickListener(new View.OnClickListener() {
+        public void Zaloguj(View view){
+
+            ConnectivityManager cMenager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+            NetworkInfo nInfo = cMenager.getActiveNetworkInfo();
+            if (nInfo != null && nInfo.isConnected()) {
                 request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -98,7 +114,16 @@ public class Logowanie extends AppCompatActivity {
 
                 requestQueue.add(request);
             }
-        });
+            else {
+                Toast.makeText(this, "Brak połączenia z internetem", Toast.LENGTH_LONG).show();
+            }
+
+
+
+
+
+
+
 
 
 

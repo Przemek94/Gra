@@ -10,6 +10,8 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -38,6 +40,7 @@ public class Pytanie1 extends AppCompatActivity {
 
 
 
+
     @Override
     public void onStop() {
         super.onStop();
@@ -59,17 +62,14 @@ public class Pytanie1 extends AppCompatActivity {
         textViewTime = (TextView) findViewById(R.id.textViewTime);
         pytanie = MediaPlayer.create(this, R.raw.pytanie1);
         pytanie.start();
-        b1.setBackgroundColor(0xffffffff);
-        b2.setBackgroundColor(0xffffffff);
-        b3.setBackgroundColor(0xffffffff);
-        b4.setBackgroundColor(0xffffffff);
-        b5.setBackgroundColor(0xffffffff);
+        b1.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b4.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
+        b5.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape));
         b1.setEnabled(false);
 
         textViewTime.setText("15");
-
-
-
 
         timer.start();
 
@@ -111,8 +111,8 @@ public class Pytanie1 extends AppCompatActivity {
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b5.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
+                b5.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -121,6 +121,7 @@ public class Pytanie1 extends AppCompatActivity {
                 timer.cancel();
                 b1.setEnabled(true);
                 mbActivie = false;
+
 
 
 
@@ -132,7 +133,7 @@ public class Pytanie1 extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b2.setBackgroundColor(0xFF00FF00);
+                b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -144,6 +145,8 @@ public class Pytanie1 extends AppCompatActivity {
                 mbActivie = false;
 
 
+
+
             }
 
         });
@@ -153,8 +156,8 @@ public class Pytanie1 extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                b3.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
+                b3.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
                 pytanie.stop();
                 b2.setEnabled(false);
                 b3.setEnabled(false);
@@ -163,6 +166,7 @@ public class Pytanie1 extends AppCompatActivity {
                 timer.cancel();
                 b1.setEnabled(true);
                 mbActivie = false;
+
 
 
             }
@@ -170,24 +174,29 @@ public class Pytanie1 extends AppCompatActivity {
         });
 
         b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                b4.setBackgroundColor(0xffff0000);
-                b2.setBackgroundColor(0xFF00FF00);
-                pytanie.stop();
-                b2.setEnabled(false);
-                b3.setEnabled(false);
-                b4.setEnabled(false);
-                b5.setEnabled(false);
-                timer.cancel();
-                b1.setEnabled(true);
-                mbActivie = false;
+                    @Override
+                    public void onClick(View v) {
+                        b4.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape3));
+                        b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
+                        pytanie.stop();
+                        b2.setEnabled(false);
+                        b3.setEnabled(false);
+                        b4.setEnabled(false);
+                        b5.setEnabled(false);
+                        timer.cancel();
+                        b1.setEnabled(true);
+                        mbActivie = false;
+
+
 
 
 
             }
 
         });
+
+
+
 
 
 
@@ -225,7 +234,7 @@ public class Pytanie1 extends AppCompatActivity {
         public void onFinish() {
             // TODO Auto-generated method stub
             pytanie.stop();
-            b2.setBackgroundColor(0xFF00FF00);
+            b2.setBackgroundDrawable(getResources().getDrawable(R.drawable.shape2));
             textViewTime.setText("Koniec Czasu");
             b1.setEnabled(true);
             b2.setEnabled(false);
@@ -240,80 +249,100 @@ public class Pytanie1 extends AppCompatActivity {
 
     }
     public void Dalej(View view) {
-        Random generator = new Random();
-        int number = generator.nextInt(20) + 1;
-        //20- liczba losowanych activity
+        Thread watek = new Thread(){
+            public void run(){
+                try {
+                    sleep(700);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    Random generator = new Random();
+                    int number = generator.nextInt(20) + 1;
+                    //20- liczba losowanych activity
 
-        Class activity = null;
+                    Class activity = null;
+
+                    switch(number) {
+                        case 1:
+
+                            activity = Pytanie21.class;
+                            break;
+                        case 2:
+                            activity = Pytanie22.class;
+                            break;
+                        case 3:
+                            activity = Pytanie23.class;
+                            break;
+                        case 4:
+                            activity = Pytanie24.class;
+                            break;
+                        case 5:
+                            activity = Pytanie25.class;
+                            break;
+                        case 6:
+                            activity = Pytanie26.class;
+                            break;
+                        case 7:
+                            activity = Pytanie27.class;
+                            break;
+                        case 8:
+                            activity = Pytanie28.class;
+                            break;
+                        case 9:
+                            activity = Pytanie29.class;
+                            break;
+                        case 10:
+                            activity = Pytanie30.class;
+                            break;
+                        case 11:
+                            activity = Pytanie31.class;
+                            break;
+                        case 12:
+                            activity = Pytanie32.class;
+                            break;
+                        case 13:
+                            activity = Pytanie33.class;
+                            break;
+                        case 14:
+                            activity = Pytanie34.class;
+                            break;
+                        case 15:
+                            activity = Pytanie35.class;
+                            break;
+                        case 16:
+                            activity = Pytanie36.class;
+                            break;
+                        case 17:
+                            activity = Pytanie37.class;
+                            break;
+                        case 18:
+                            activity = Pytanie38.class;
+                            break;
+                        case 19:
+                            activity = Pytanie39.class;
+                            break;
+                        default:
+                            activity = Pytanie40.class;
+                            break;
+                    }
+
+                    Intent intent = new Intent(getBaseContext(), activity);
+                    intent.putExtra("Punkty", punkty);
+                    startActivity(intent);
+                }
+            }
+        };
+
+        final Animation animTranslater = AnimationUtils.loadAnimation(this, R.anim.anim_translater);
+        final Animation animTranslatel = AnimationUtils.loadAnimation(this, R.anim.anim_translatel);
+        b5.startAnimation(animTranslater);
+        b3.startAnimation(animTranslatel);
+        b2.startAnimation(animTranslater);
+        b4.startAnimation(animTranslatel);
+        watek.start();
 
 
-        switch(number) {
-            case 1:
-
-                activity = Pytanie21.class;
-                break;
-            case 2:
-                activity = Pytanie22.class;
-                break;
-            case 3:
-                activity = Pytanie23.class;
-                break;
-            case 4:
-                activity = Pytanie24.class;
-                break;
-            case 5:
-                activity = Pytanie25.class;
-                break;
-            case 6:
-                activity = Pytanie26.class;
-                break;
-            case 7:
-                activity = Pytanie27.class;
-                break;
-            case 8:
-                activity = Pytanie28.class;
-                break;
-            case 9:
-                activity = Pytanie29.class;
-                break;
-            case 10:
-                activity = Pytanie30.class;
-                break;
-            case 11:
-                activity = Pytanie31.class;
-                break;
-            case 12:
-                activity = Pytanie32.class;
-                break;
-            case 13:
-                activity = Pytanie33.class;
-                break;
-            case 14:
-                activity = Pytanie34.class;
-                break;
-            case 15:
-                activity = Pytanie35.class;
-                break;
-            case 16:
-                activity = Pytanie36.class;
-                break;
-            case 17:
-                activity = Pytanie37.class;
-                break;
-            case 18:
-                activity = Pytanie38.class;
-                break;
-            case 19:
-                activity = Pytanie39.class;
-                break;
-            default:
-                activity = Pytanie40.class;
-                break;
-        }
-
-        Intent intent = new Intent(getBaseContext(), activity);
-        intent.putExtra("Punkty", punkty);
-        startActivity(intent);
     }
 
     @Override
