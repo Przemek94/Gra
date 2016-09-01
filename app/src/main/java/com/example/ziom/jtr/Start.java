@@ -4,20 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.Random;
 
 public class Start extends AppCompatActivity {
 
-    Button b1;
+    ImageButton b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        b1 = (Button) findViewById(R.id.button4);
-        b1.setBackgroundColor(0xff2BBCEC);
+        b1 = (ImageButton) findViewById(R.id.button4);
+
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
         if (bar != null) {

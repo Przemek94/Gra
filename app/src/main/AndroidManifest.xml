@@ -440,8 +440,9 @@
             android:name=".Koniec"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".Logowanie"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".Logowanie"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.example.ziom.jtr.MainActivity" />
 
@@ -450,18 +451,39 @@
         </activity>
         <activity
             android:name=".Rejestracja"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".JSON"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Menu_offline"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".DisplayListView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".StartBonus"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusPyt1"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusPyt2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusPyt3"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusPyt4"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusPyt5"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".BonusKoniec"
             android:screenOrientation="portrait">
         </activity>
     </application>

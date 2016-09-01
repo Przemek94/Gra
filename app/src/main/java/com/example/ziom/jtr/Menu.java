@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +26,7 @@ import java.util.TimerTask;
 
 public class Menu extends AppCompatActivity {
     DatabaseHelper myDb;
-    Button btnnaj;
+    Button NowaGra, Najlepszy, Pomoc;
     String username;
     TextView login;
     SharedPreferences sharedPreferences;
@@ -41,6 +43,9 @@ public class Menu extends AppCompatActivity {
         //btnnaj = (Button) findViewById(R.id.Najlepszy);
         login = (TextView) findViewById(R.id.nick);
         //viewAll();
+        NowaGra = (Button)findViewById(R.id.button);
+        Najlepszy = (Button)findViewById(R.id.Najlepszy);
+        Pomoc = (Button)findViewById(R.id.button3);
 
         new BacgroundTask().execute();
 
@@ -165,17 +170,43 @@ public class Menu extends AppCompatActivity {
     }*/
 
     public void New_Game(View view) {
-        Intent intent = new Intent(this, Start.class);
-        startActivity(intent);
-        SharedPreferences sharedPreferences = getSharedPreferences("MyData", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("Login", username);
-        editor.commit();
+        Thread watek = new Thread() {
+            public void run() {
+                try {
+                    sleep(700);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent intent = new Intent(getBaseContext(), Start.class);
+                    startActivity(intent);
+                    SharedPreferences sharedPreferences = getSharedPreferences("MyData", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("Login", username);
+                    editor.commit();
+                }
+            }
+        };
+        final Animation animTranslater = AnimationUtils.loadAnimation(this, R.anim.anim_translater);
+        NowaGra.startAnimation(animTranslater);
+        watek.start();
     }
 
     public void Help(View view) {
-        Intent intent = new Intent(this, Pomoc.class);
-        startActivity(intent);
+        Thread watek = new Thread() {
+            public void run() {
+                try {
+                    sleep(700);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent intent = new Intent(getBaseContext(), Pomoc.class);
+                    startActivity(intent);
+                }
+            }
+        };
+        final Animation animTranslater = AnimationUtils.loadAnimation(this, R.anim.anim_translater);
+        Pomoc.startAnimation(animTranslater);
+        watek.start();
     }
 
 
@@ -192,12 +223,25 @@ public class Menu extends AppCompatActivity {
     //}
 
     public void Wynik(View view) {
-        new BacgroundTask().execute();
-    Intent intent = new Intent(this,DisplayListView.class);
-        intent.putExtra("json_data", JSON_String);
-    startActivity(intent);
+        Thread watek = new Thread() {
+            public void run() {
+                try {
+                    sleep(700);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    new BacgroundTask().execute();
+                    Intent intent = new Intent(getBaseContext(), DisplayListView.class);
+                    intent.putExtra("json_data", JSON_String);
+                    startActivity(intent);
 
 
+                }
+            }
+        };
+        final Animation animTranslatel = AnimationUtils.loadAnimation(this, R.anim.anim_translatel);
+        Najlepszy.startAnimation(animTranslatel);
+        watek.start();
     }
     boolean twice =false;
     @Override

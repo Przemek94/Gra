@@ -6,6 +6,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ public class Koniec extends AppCompatActivity {
     public static final String DEFAULT = "Login";
     Intent intent;
     String username;
+    Button bonus;
 
 
     @Override
@@ -41,6 +44,8 @@ public class Koniec extends AppCompatActivity {
         Wynik = (TextView) findViewById(R.id.Wynik);
         NajleszyWynik = (TextView) findViewById(R.id.NajlepszyWynik);
         login = (TextView)findViewById(R.id.login);
+        bonus = (Button)findViewById(R.id.bonus);
+       // bonus.setEnabled(false);
 
         Wynik.setText("punkty");
 
@@ -103,6 +108,15 @@ public class Koniec extends AppCompatActivity {
         if (bar != null) {
             bar.hide();
         }
+
+       // if (punkty>=69000){
+        //    bonus.setEnabled(true);
+       // }
+    }
+
+    public void Bonus(View view){
+        Intent intent = new Intent(this, StartBonus.class);
+        startActivity(intent);
     }
 
 
