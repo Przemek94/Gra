@@ -11,7 +11,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Playboys - Tylko Ty"
+        android:text=" Playboys - Tylko Ty "
         android:background="@drawable/shape"
         android:id="@+id/bttn5"
         android:layout_marginTop="51dp"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mig - Miód Malina "
+        android:text=" Mig - Miód Malina "
         android:id="@+id/bttn3"
         android:background="@drawable/shape"
         android:layout_below="@+id/bttn5"
@@ -34,7 +34,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spontan - Tylko Tobie"
+        android:text=" Spontan - Tylko Tobie "
         android:id="@+id/bttn2"
         android:state_pressed="true"
         android:background="@drawable/shape"
@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Extazy - Jeszcze Raz Przytul Mnie"
+        android:text=" Extazy - Jeszcze Raz Przytul Mnie "
         android:id="@+id/bttn4"
         android:background="@drawable/shape"
         android:layout_marginTop="30dp"

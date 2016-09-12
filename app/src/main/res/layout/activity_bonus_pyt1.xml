@@ -11,7 +11,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akcent - Przekorny los"
+        android:text=" Akcent - Przekorny los "
         android:background="@drawable/shape"
         android:id="@+id/bttn5"
         android:layout_marginTop="29dp"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akcent - Czekam na Ciebie"
+        android:text=" Akcent - Czekam na Ciebie "
         android:id="@+id/bttn3"
         android:background="@drawable/shape"
         android:layout_below="@+id/bttn5"
@@ -34,7 +34,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akcent - Przez Twe Oczy Zielone "
+        android:text=" Akcent - Przez Twe Oczy Zielone "
         android:id="@+id/bttn2"
         android:state_pressed="true"
         android:background="@drawable/shape"
@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akcent - Prawdziwa Miłość to Ty"
+        android:text=" Akcent - Prawdziwa Miłość to Ty "
         android:id="@+id/bttn4"
         android:background="@drawable/shape"
         android:layout_marginTop="30dp"

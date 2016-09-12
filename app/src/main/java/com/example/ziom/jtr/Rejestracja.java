@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Rejestracja extends AppCompatActivity {
-    EditText username, password;
+    EditText username, password, email;
     final String TAG = this.getClass().getName();
     // String str_username, str_email, str_password;
 
@@ -22,6 +22,7 @@ public class Rejestracja extends AppCompatActivity {
         setContentView(R.layout.activity_rejestracja);
         username = (EditText)findViewById(R.id.et_Username);
         password = (EditText)findViewById(R.id.et_Password);
+        email = (EditText)findViewById(R.id.et_Email);
 
         android.support.v7.app.ActionBar bar = getSupportActionBar();
         if (bar != null) {
@@ -42,9 +43,10 @@ public class Rejestracja extends AppCompatActivity {
         if (nInfo != null && nInfo.isConnected()) {
             String str_username = username.getText().toString();
             String str_password = password.getText().toString();
+            String str_email = email.getText().toString();
             String type = "register";
             BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-            backgroundWorker.execute(type, str_username, str_password);
+            backgroundWorker.execute(type, str_username, str_password, str_email);
         } else {
             Toast.makeText(this, "Brak połączenia z internetem", Toast.LENGTH_LONG).show();
 

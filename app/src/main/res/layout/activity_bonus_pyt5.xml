@@ -11,7 +11,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bayera – Zakręciłaś mnie"
+        android:text=" Bayera – Zakręciłaś mnie "
         android:background="@drawable/shape"
         android:id="@+id/bttn5"
         android:layout_marginTop="53dp"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Piękni i Młodzi - Ona jest taka cudowna"
+        android:text=" Piękni i Młodzi - Ona jest taka cudowna "
         android:id="@+id/bttn3"
         android:background="@drawable/shape"
         android:layout_below="@+id/bttn5"
@@ -34,7 +34,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alster – Wakacyjna Dziewczyna"
+        android:text=" Alster – Wakacyjna Dziewczyna "
         android:id="@+id/bttn2"
         android:state_pressed="true"
         android:background="@drawable/shape"
@@ -47,7 +47,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nexus – Jesteś Piękna"
+        android:text=" Nexus – Jesteś Piękna "
         android:id="@+id/bttn4"
         android:background="@drawable/shape"
         android:layout_marginTop="30dp"
