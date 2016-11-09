@@ -109,13 +109,17 @@ public class Koniec extends AppCompatActivity {
             bar.hide();
         }
 
-       // if (punkty>=69000){
-        //    bonus.setEnabled(true);
-       // }
+        if (punkty>=69000){
+            bonus.setEnabled(true);
+        }
     }
 
     public void Bonus(View view){
         Intent intent = new Intent(this, StartBonus.class);
+        startActivity(intent);
+    }
+    public void Replay(View view){
+        Intent intent = new Intent(this, Start.class);
         startActivity(intent);
     }
 

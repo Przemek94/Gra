@@ -84,5 +84,17 @@
         android:layout_marginBottom="34dp"
         android:onClick="Bonus"/>
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_above="@+id/bonus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/replay"
+        android:background="@color/blue"
+        android:adjustViewBounds="true"
+        android:onClick="Replay"/>
+
 
 </RelativeLayout>

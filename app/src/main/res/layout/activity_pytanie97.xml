@@ -11,7 +11,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Rak Raczej "
+        android:text=" Kartky "
         android:background="@drawable/shape"
         android:id="@+id/bttn5"
         android:layout_marginTop="53dp"
@@ -34,7 +34,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" sokół "
+        android:text=" Sokół "
         android:id="@+id/bttn2"
         android:state_pressed="true"
         android:background="@drawable/shape"
@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" kajman "
+        android:text=" Kajman "
         android:id="@+id/bttn4"
         android:background="@drawable/shape"
         android:layout_marginTop="30dp"

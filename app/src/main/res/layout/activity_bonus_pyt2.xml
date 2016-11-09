@@ -45,7 +45,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Milano - O Tobie kochana "
+        android:text=" Defis - Niespotykany kolor "
         android:id="@+id/bttn4"
         android:background="@drawable/shape"
         android:layout_marginTop="30dp"

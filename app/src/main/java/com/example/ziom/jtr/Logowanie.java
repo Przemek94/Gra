@@ -79,7 +79,7 @@ public class Logowanie extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             if (jsonObject.names().get(0).equals("success")) {
-                                Toast.makeText(getApplicationContext(), "Zalogowano " + jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Zalogowano." + jsonObject.getString("success"), Toast.LENGTH_SHORT).show();
                                 //startActivity(new Intent(getApplicationContext(), Menu.class));
                                 Intent intent = new Intent(getApplicationContext(), Menu.class);
                                 intent.putExtra("Login", username.getText().toString());

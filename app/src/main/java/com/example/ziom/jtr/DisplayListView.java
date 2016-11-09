@@ -31,6 +31,11 @@ public class DisplayListView extends AppCompatActivity {
         setContentView(R.layout.display_listview_layout);
         listView = (ListView)findViewById(R.id.listview);
 
+        android.support.v7.app.ActionBar bar = getSupportActionBar();
+        if (bar != null) {
+            bar.hide();
+        }
+
         new BacgroundTask().execute();
 
 
